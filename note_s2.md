@@ -68,6 +68,16 @@ consistent hashing algorithm
 
 
 
+                circular keyspace is split into 
+                contiguous segments whose 
+                endpoints are the node identifiers. 
+                i1 and i2 are 
+                two adjacent IDs, 
+                with a shorter clockwise distance from i1 to i2, 
+                then the node with ID i2 owns 
+                all the keys that 
+                fall between i1 and i2.
+                        - https://en.wikipedia.org/wiki/Distributed_hash_table
 
 
 
