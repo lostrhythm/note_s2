@@ -1,8 +1,8 @@
 # note_s2
 Tuesday, 16-Jan-18 22:14:11 UTC in RFC 2822  
-consistent hashing algorithm  
-        - https://en.wikipedia.org/wiki/Consistent_hashing
+consistent hashing algorithm
 
+        - https://en.wikipedia.org/wiki/Consistent_hashing
                 The main idea behind the
                 consistent hashing algorithm
 
