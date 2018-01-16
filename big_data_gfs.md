@@ -20,7 +20,7 @@ gfs
             - caching data, put data in memory
             - so that it can be efficiently accessed
             
-
+        operation log - journals
 
 
 co
