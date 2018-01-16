@@ -1,6 +1,6 @@
 # note_s2
 consistent hashing algorithm
-
+        - Tuesday, 16-Jan-18 22:14:11 UTC in RFC 2822
         - https://en.wikipedia.org/wiki/Consistent_hashing
 
                 The main idea behind the
