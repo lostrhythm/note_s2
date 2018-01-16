@@ -91,5 +91,5 @@ Rendezvous hashing
                 Given some key k, 
                 a client computes n hash weights w1 = h(S1, k), w2 = h(S2, k), ..., wn = h(Sn, k). 
                 The client associates that key 
-                with the server corresponding to the highest hash weight 
+                with the server corresponding to the highest hash weight  
          
