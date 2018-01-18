@@ -32,9 +32,11 @@ headfirst java
 
 # Thursday, 18-Jan-18 13:55:11 UTC  
 circuit operator
+
     && ||
     
 non circuit operator
+
     & |
     - for manipulating bits, force the jvm to check both side of the equation
         - P151
