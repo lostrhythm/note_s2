@@ -41,6 +41,28 @@ non circuit operator
         
         
         
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 ------
 basic blocks  
 
@@ -65,5 +87,7 @@ basic blocks
     5. compile
     6. compile to exe
     7. read from cmd input
+    
+    
     
     
