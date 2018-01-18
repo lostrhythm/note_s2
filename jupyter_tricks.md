@@ -11,5 +11,6 @@ decorate(ax)
 p  
 
     command line
-    
+    %matplotlib inline 
+        which tells the notebook to render the plots in the browser and not to file.
     
