@@ -56,16 +56,74 @@ Using a library
         - this is the full name
         
 package
+
     in java 
     package is the set of classes
         
+    javax
+        start as extension
+        then got a promotion
+            - P 156
+            
+        Swing is the mother of all standard extensions
+            - only in old version??
+            - javax.swing
         
         
+using ArrayList to contain primitives 
+compiles will automatically "wrap" and "unwrap" it for you
+
+import 
+
+    is simply the way you give java the full name of a class
+        - P 157
         
         
+inherence
+
+    when you call a method on an object reference,
+    calling the most specific version
+    the lowest one wins
+        - P175
         
+    is-a
+        inherent relationship
         
+    has-a
+        member variable relationship
         
+    super.method
+        invoke the method of the superclass
+        
+        public void roam{
+            super.roam();
+            // following codes
+        }
+            - P180
+            - similar to what decorator does.
+        
+     do not using inheritance just because reusing some code
+        - can instead use a has-a relationship to reuse the code
+        
+     only using inheritance,
+     when the subclass is a more specific type of the superclass
+        - P 181
+     
+     
+access levels
+    
+    - strict to loose
+    private
+        not inherited
+        
+    default
+    protected
+    public
+        inherited
+    
+    
+- P182
+    
         
         
         
@@ -103,5 +161,15 @@ basic blocks
     7. read from cmd input
     
     
-    
+------  
+head first design pattern
+
+
+
+
+
+
+
+
+
     
