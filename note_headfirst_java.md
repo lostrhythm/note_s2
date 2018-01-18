@@ -29,3 +29,25 @@ headfirst java
 
 
 # Thursday, 18-Jan-18 13:55:11 UTC  
+circuit operator
+    && ||
+    
+non circuit operator
+    & |
+    - for manipulating bits, force the jvm to check both side of the equation
+        - P151
+        
+        
+        
+------
+basic blocks  
+
+    1. print
+    2. read file
+    3. write file
+    4. import 
+    5. compile
+    6. compile to exe
+    
+    
+    
