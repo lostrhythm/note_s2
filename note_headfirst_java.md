@@ -14,6 +14,7 @@ headfirst java
         .add
         .remove
         can not hold primitives
+        import java.util.*
 
     array
         one and only instance variable
@@ -41,11 +42,22 @@ non circuit operator
     - for manipulating bits, force the jvm to check both side of the equation
         - P151
         
-        
-        
+java.lang
 
+    System.out.println  
+    String  
+    Math.random()
+        - classes from a package
         
+Using a library
+
+    i.e java api  
+    package name. class name
+        - this is the full name
         
+package
+    in java 
+    package is the set of classes
         
         
         
