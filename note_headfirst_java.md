@@ -41,7 +41,6 @@ non circuit operator
         
 ------
 basic blocks  
-
     1. print
     2. read file
     3. write file
