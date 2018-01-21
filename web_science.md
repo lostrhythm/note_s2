@@ -13,7 +13,6 @@ DFR
         
         - https://lucene.apache.org/core/4_4_0/core/org/apache/lucene/search/similarities/DFRSimilarity.html  
         divergence from randomness (DFR)  
-        framework in Lucene  
         Gianni Amati and Cornelis Joost Van Rijsbergen. 2002.  
         Probabilistic models of information retrieval based on measuring the divergence from randomness.  
         ACM Trans. Inf. Syst. 20, 4 (October 2002), 357-389.
