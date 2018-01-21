@@ -221,9 +221,101 @@ overriden
     
     abstract class Employee {}
 
+    - 一个类包含抽象方法，那么该类必须是抽象类
+    - 子类必须重写父类的抽象方法，或者声明自身为抽象类
+    
 抽象方法
+
     public abstract double computePay();
         - must be implemented in the subclass
+        
+    构造方法，类方法（用static修饰的方法）不能声明为抽象方法
+        
+        
+封装 Encapsulation
+    
+    将 抽象性函式接口 的 实现细节部份 包装、隐藏起来 的方法
+    要访问该类的代码和数据，必须 通过 严格的 接口控制
+    
+    最主要的功能 在于我们 能修改自己的实现代码，
+    而不用修改 那些 调用我们代码的 程序片段
+        
+    类内部的结构 可以 自由修改
+    隐藏 信息 实现细节
+        
+    step:
+        1. set member variable as private
+        2. 对 private variable 提供对外的公共方法访问，也就是创建 一对 getter和setter方法
+        
+        
+接口 Interface
+    
+    抽象方法的集合
+    一个类通过继承接口的方式，从而来继承接口的抽象方法
+        - purely contract
+
+    difference
+        类 描述对象的属性和方法
+        接口 则包含类要实现的方法
+            - 无法被 实例化，可以被 实现
+            - 除非 实现 接口的类 是 抽象类，否则 该类 要 定义接口中的 所有方法
+            
+        接口没有 构造方法
+        所有的方法 必须是抽象方法
+            - 方法是不能在接口中实现的，只能由实现接口的类来实现
+            
+        成员变量 只能是 public static final 
+        不是被 继承 ，而是被 实现
+        接口支持 多继承
+            - multi implement
+        
+        不能含有 静态代码块 以及 静态方法
+            - 用 static 修饰的方法
+            - 隐式的指定为 public abstract, and only this is valid
+                - static: class ownership?
+        
+        
+        
+    接口类型可用来 声明一个变量，
+    绑定一个 实现此接口 的对象
+        - interface variable
+        
+        
+    隐式抽象的
+    接口中每一个方法也是隐式抽象的
+    方法都是公有
+        
+        
+    类在实现接口的方法时，不能抛出强制性异常，只能在接口中，或者继承接口的抽象类中抛出该强制性异常
+        # ???
+        # how to throw?
+        
+    一个接口能继承另一个接口
+        - is an interface able to extend other multiple interface?
+        - yes!
+        
+        
+标记接口
+
+    最常用的 继承接口
+    没有任何方法的接口被称为 标记接口
+        - 给某个对象打个标（盖个戳）
+        
+    1. 建立一个公共的父接口
+    2. 向一个类添加数据类型
+        最初的目的
+        该类通过多态性变成一个接口类型
+            - an interface reference 
+            - is able to be used to point to the new class
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
 ------
 basic blocks  
