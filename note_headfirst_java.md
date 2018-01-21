@@ -1,3 +1,5 @@
+set PATH=%PATH%;C:\Program Files\Java\jdk1.8.0_131\bin  
+
 # Wednesday, 17-Jan-18 13:58:15  
 headfirst java
 
@@ -307,6 +309,46 @@ overriden
         该类通过多态性变成一个接口类型
             - an interface reference 
             - is able to be used to point to the new class
+        
+        
+包(package)
+    
+    更好地组织类
+    区别 类名的命名空间
+        
+    包也限定了 访问权限，拥有 包访问权限 的类 才能访问某个包中的类
+        
+    also 提供搜索和定位类（class）、接口、枚举（enumerations）和注释（annotation）...
+        
+    source code in one package, it needs to put the declearation of the package at the 
+    beginning of the file
+        - e.g. package animals;
+        
+    
+    import
+        import package1[.package2…].(classname|*);
+            - import from other package
+
+        类文件中可以包含任意数量的 import 声明
+        import 声明必须在包声明之后，类声明之前
+        
+    包名 须与 目录结构 相吻合
+        - 通常，一个公司使用它互联网域名的颠倒形式来作为它的包名.
+        - 例如：互联网域名是 runoob.com，
+        - 所有的包名都以 com.runoob 开头。
+        - 包名中的每一个部分对应一个子目录。
+        
+            - javac -d . zz.java
+            - automatically generate the delcared package structure 
+        
+        
+    并不要求 .class 文件的路径跟相应的 .java 的路径一样。
+    你可以分开来安排源码和类的目录
+        - 可以将你的类目录分享给其他的编程人员，而不用透露自己的源码    
+    
+        
+    JAR 文件按包含 Java 平台相关的类，所以他们的目录默认放在了 class path 中
+        - ??
         
         
         
