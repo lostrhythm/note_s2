@@ -1,0 +1,6 @@
+1. data as a whole
+2. random select theta
+3. F(theta | data) to select theta sample
+4. Morpholis sampling have a high probability to goto high density direction, 
+  so the samples will be porpotional to the distribution. 
+  so the final samples can be used to simulate the distribution.
