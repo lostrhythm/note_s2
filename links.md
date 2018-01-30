@@ -6,7 +6,9 @@ https://glasgow.summon.serialssolutions.com/?s.q=head+first+java&s.cmd=addFacetV
 
 https://github.com/bethrobson/Head-First-Java
 
-https://www.desmos.com/calculator
+demo
+
+    https://www.desmos.com/calculator
 
 https://web.kamihq.com/web/viewer.html
 
