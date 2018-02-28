@@ -26,3 +26,8 @@ API
 
 
 https://www.bejson.com/knownjson/regexJiaocheng/
+
+
+rotate ticks
+
+    https://stackoverflow.com/questions/11264521/date-ticks-and-rotation-in-matplotlib
