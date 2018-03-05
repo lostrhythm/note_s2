@@ -6,4 +6,5 @@ set DF labels
     
     
     
-https://towardsdatascience.com/fast-ai-lesson-1-on-google-colab-free-gpu-d2af89f53604
+https://towardsdatascience.com/fast-ai-lesson-1-on-google-colab-free-gpu-d2af89f53604  
+https://colab.research.google.com/notebook#fileId=/v2/external/notebooks/gpu.ipynb
