@@ -1,0 +1,3 @@
+train_posts = load_posts(discourse_train)  
+filtering_mask = (train_posts['discourse_type'] != "")  
+train_posts = train_posts[filtering_mask] # filtering
