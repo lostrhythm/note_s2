@@ -23,3 +23,4 @@ learning rate getting small - ,
     derivative -, means function getting small
 few things to learn  
 tune step small
+ 
