@@ -31,3 +31,19 @@ xavier initialization
 # https://www.coursera.org/learn/deep-neural-network/lecture/qcogH/mini-batch-gradient-descent
     an epoch
         single pass through the training set
+
+# https://www.coursera.org/learn/deep-neural-network/lecture/lBXu8/understanding-mini-batch-gradient-descent
+    stochastic gradient descent
+        mini batch size == 1
+        
+    typical batch size
+        2**n
+            64 ~ 512
+            
+# https://www.coursera.org/learn/deep-neural-network/lecture/duStO/exponentially-weighted-averages
+    moving average
+        exponentially weighted average, 
+        reason it called "exponentially", is because the "feedback" structure, exponential filter
+        
+        
+        
