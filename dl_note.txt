@@ -1,1 +1,33 @@
 # 28/05/2018
+
+# https://www.coursera.org/learn/deep-neural-network/lecture/XzSSa/numerical-approximation-of-gradients
+two side approximation is more accurate than the one side approx
+
+# https://www.coursera.org/learn/deep-neural-network/lecture/htA0l/gradient-checking
+gradient check
+    reshape the parameters 
+    d_parameters 
+        into big vector
+        do numercial approx 
+        on each dimension
+        to get theta_approx
+        
+    check the approximationality between theta_approx and theta
+        use cos similarity
+            normalization with the length of theta_approx and theta
+            
+https://www.coursera.org/learn/deep-neural-network/lecture/6igIc/gradient-checking-implementation-notes
+    with drop out the J is different as the network is different
+    then, the gradient checking technique is not suitable to compute here
+    so, do gradient checking first, when find no problem, turn on the drop out
+    
+xavier initialization
+    used for making the wx not too big or too small, so that the g(wx) has the big slope, then make the optimazation faster,
+        tanh : np.sqrt(1 / n)
+            # xavier
+        ReLU : np.sqrt(2 / n)
+
+    
+# https://www.coursera.org/learn/deep-neural-network/lecture/qcogH/mini-batch-gradient-descent
+    an epoch
+        single pass through the training set
