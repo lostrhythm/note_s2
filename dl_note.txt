@@ -47,3 +47,35 @@ xavier initialization
         
         
         
+        
+# https://www.coursera.org/learn/deep-neural-network/lecture/y0m1f/gradient-descent-with-momentum
+    using exponentially weighted average to build a better optimization algorithm
+        calculating the exponentially weight of the gradient, 
+        use this gradient to update the gradients
+        
+    reduce the speed onsome specific direction
+    
+    momentum, 
+        # df: use the previous speed direction as component of current one, once find a direction, keep go along it for some extent
+        here is using average to smooth directions,
+            so that direction with more ocileration is slown down
+            the direction with less ocilleration is fasteren up
+            
+            
+# https://www.coursera.org/learn/deep-neural-network/lecture/BhJlm/rmsprop
+    RMSprop
+        root mean squre properation
+        not using the S_w directly
+        
+        
+# https://www.coursera.org/learn/deep-neural-network/lecture/w9VCZ/adam-optimization-algorithm
+    adam
+        adaptive moment estimation
+            = momentum + RMSprop
+                # divide the momentum by the RMSprop
+        
+        
+        
+        
+        
+        
