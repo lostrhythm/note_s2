@@ -75,7 +75,31 @@ xavier initialization
                 # divide the momentum by the RMSprop
         
         
+# https://www.coursera.org/learn/deep-neural-network/lecture/RFANA/the-problem-of-local-optima
+    momentum
+    RMSprop
+    Adam
+        are all for speed up the algorithm, by allowing to use the big learning rate
+        which is important to overcome the plateau problem
         
         
+# https://www.coursera.org/learn/deep-neural-network/lecture/3rdqN/using-an-appropriate-scale-to-pick-hyperparameters
+    sample in log scale
+        r = -4 * np.random.uniform()
+        alpha = 10**r
+        
+        
+# https://www.coursera.org/learn/deep-neural-network/lecture/4ptp2/normalizing-activations-in-a-network
+    batch normalization
+        # local nomalization?
+        make it easier for hyperparameters search
+        
+        not for normalization a mini batch
+        instead it normalize the z
+        
+# https://www.coursera.org/learn/deep-neural-network/lecture/RN8bN/fitting-batch-norm-into-a-neural-network
+    reason called batch norm
+        using with the mini batch, instead of the batch gradient
+        but in fact no difference of the mechanism, only using the different mean and variance
         
         
