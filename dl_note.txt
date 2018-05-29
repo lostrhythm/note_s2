@@ -103,3 +103,69 @@ xavier initialization
         but in fact no difference of the mechanism, only using the different mean and variance
         
         
+        
+        
+# 29/05/2018
+# https://www.coursera.org/learn/deep-neural-network/lecture/81oTm/why-does-batch-norm-work
+    batch norm reduce the previous layers parameters changes leading to the current activation units change too much, 
+    then the performance of the NN will be impacted, as the new distribution is not familiar to the NN
+    
+    boost the independence between different layers, speed up the learning speed? how?
+        # so as to have bigger slope of the g
+
+    add noise to hidden layers, make the dependence weaker, not strongly rely on some specific hidden unit,
+    thus slight regularization effect
+    
+        as bigger mini batch size lead to smaller noise on mean and var,
+        thus wierd:
+            bigger batch weaker regularization effect
+
+
+# https://www.coursera.org/learn/deep-neural-network/lecture/FsoNw/batch-norm-at-test-time
+    problem with my TP.predict
+        using half of the batch normalization
+        but not applying the normalization to the prediction?0
+        
+        
+        
+# https://www.coursera.org/learn/deep-neural-network/lecture/HRy7y/softmax-regression
+    why not just trivial logistic regression, and normalize among all the output units
+    softmax is function of vector, instead of sigle value like ReLU or logistic regression
+
+
+# https://www.coursera.org/learn/deep-neural-network/lecture/LCsCH/training-a-softmax-classifier
+    hardmax
+        max with 1,
+        others with 0
+        
+    when c == 2, softmax == logistic
+        
+    softmax loss function does not use (1-y)log y  to deal with the negative example, 
+    is because, there is the constraint on sum(Y) = 1, as long as the prob corresponding to 1
+    is big, the prob corresponding to 0 is small
+
+
+
+
+# 
+XOR XOR XOR ...
+    2**(n-1)
+    due to n-1 * XOR, can be 0/1
+    then 2**(n-1) sequence of "111011101101"(or) union together to enumerate all the possible sequence
+    of XOR sequence
+    
+    
+# https://www.coursera.org/learn/machine-learning-projects/lecture/LG12R/avoidable-bias
+    by definition, nothing can be better than the Bayes error, unless overfitting
+    
+    avoidable bias
+    variance
+        tools for analysising what kind of problem should be focus on,
+        i.e. the one has more space for improvment
+        
+        
+# https://www.coursera.org/learn/machine-learning-projects/lecture/IGRRb/cleaning-up-incorrectly-labeled-data
+    systematic errors
+    
+
+        
