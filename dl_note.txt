@@ -254,9 +254,44 @@ why? will not lead to bias??
     average pooling
         use to collapse the representation
         
+    all poolings have no parameters to learn
         
         
         
+        
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/uRYL1/cnn-example
+    as pool layer does not have weights, 
+    conventionally treat it as the same layer with the conv layer
+        
+    full connection layer
+        normal NN layer
+        
+        units in adjecent layers are fully connected
+        on the contrary, the CONV layers, the features only related to the features of the previous layer,
+        which inside the sliding window
+        
+        
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/Xv7B5/why-convolutions
+    conv uses much less params then FC
+        due to 
+            1. sliding window - parameter sharing
+            2. only connect to sliding window
+        
+        translation invariance
+            robust
+            
+            
+"parameters"
+    conv
+        300 * 300 * 3
+        5 * 5 * 3 + 1
+            parameters for one filter, need to be 3-D
+        (5 * 5 * 3 + 1) * 100
+        
+    NN
+        300 * 200 + 300
+            300 weights for the bias 1 : b_1 ... b_300
+        parameters 100 filters
         
         
         
