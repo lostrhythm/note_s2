@@ -168,4 +168,97 @@ XOR XOR XOR ...
     systematic errors
     
 
+
+
+
+
+# https://www.coursera.org/learn/machine-learning-projects/lecture/WNPap/transfer-learning
+    pre-training 
+    fine tunning
+    
+    why transfer learning minght not hearts?
+        what if it already stuck on a pleatue by pre training, and fine tunning could not get it out?
+    
+    # more popular!
+    
+    
+# https://www.coursera.org/learn/machine-learning-projects/lecture/l9zia/multi-task-learning
+    the main difference between softmax and multi-task
+        multi-task is using the combination of logistic regressions,
+            1 image multi-labels
+            allow multiple 1 in output label
+            when the images are not fully labeled, denote the unchecked label dimension with "?",
+            then at the final output we can just skip the "?"s when calculate the loss  
+        softmax
+            1 image sigle-label
+            only allow sigle 1 in output label
+            
+            
+both transfer learning and multi-task learning, it seems need much more auxiliary data than the explicit data,
+why? will not lead to bias??
+            
+            
+            
+# https://www.coursera.org/learn/machine-learning-projects/lecture/k0Klk/what-is-end-to-end-deep-learning
+    end to end learning
+        is using one NN directly predict from a image to the label
+        
+        simple system structure, direct mapping
+        need a lot of data
+        
+    divide up, into steps
+        need much less data
+    
+    
+    
+    
+    
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/o7CWi/padding
+    padding
+        is for solve the problems:
+            1. shrinking output
+            2. throw away info from edges
+            
+        valid
+            no padding
+        same
+            maintain the same size between input image and output image
+            
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/wfUhx/strided-convolutions
+    stride convolution
+        means each step shift not only one element
+        
+    
+    
+    
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/A9lXL/simple-convolutional-network-example
+    general trend of convolutional network
+        1. n_h n_w increasing
+        2. n_c descreasing
+        
+    3 types of layers
+        1. convolution
+        2. pooling
+        3. fully connected
+        
+        
+        
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/hELHk/pooling-layers
+    max pooling
+        normal sliding window, but no params, just get the max
+            # "max" feature
+        emphasis on some particular feature
+        
+        used more often
+        
+    average pooling
+        use to collapse the representation
+        
+        
+        
+        
+        
+        
+        
+        
         
