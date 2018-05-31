@@ -355,5 +355,57 @@ why? will not lead to bias??
         
         
         
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/6UnU4/convolutional-implementation-of-sliding-windows
+    fc 400 == 1*1 filter * 400
+        # which is just the network in network
+        
+    make use of the inherient sliding window of convolution network, 
+    to implement the window sliding in object detection
+
+    the yellow margine does not have strictly correspondingness among different layer
+    just stand for the area bigger than the one window version
+    
+    the pipline for processing one window, if apply it on the image,
+    == applying the window to slide the image.
+
+    this is infact use a pipline of filters to equal to a single of filters
+    can we directly check if it is equivalent?
+    
+    
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/9EcTO/bounding-box-predictions
+    the YOLO algorithm is intuitively set what we want, so as to set the shape of output,
+    how can we be sure the output is just what we want??? 
+    as there are mix and non-linear procedure among the procedure
+        # as using ReLU?? 
+        all the mysteries are in the labeling the dataset
+        
+    different tasks / algorithms
+        object localization
+            directly predict using CNN
+        landmark detection
+            directly predict using CNN
+            
+            
+        object detect
+            # detection algo 1
+            sliding window
+            or using CNN all windows in one go
+        bounding box prediction
+            # detection algo 2
+            fixed window combine with obj localization
+                # not using sliding window, so that call YOLO - you only look once
+
+
         
         
+        
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/p9gxz/intersection-over-union
+    intersection over union
+        map localisation to accuracy, its a metric
+        also a metric of measuring how similar to boxes are
+        
+        
+        
+        
+    
+    
