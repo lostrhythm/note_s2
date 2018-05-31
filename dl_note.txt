@@ -297,3 +297,63 @@ why? will not lead to bias??
         
         
         
+        
+# 31/05/2018
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/HAhz9/resnets
+    residual network
+        skip connection / short cut
+            a[l] skip a[l+1] and sum with z[l+1] directly
+            
+            
+
+        
+        
+        
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/5WIZm/inception-network-motivation
+    error on 2:06
+        pooling conduct on each channel independently, does not change the depth of the image
+        other thing is just like the normal convolution sliding window
+        
+        
+        
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/5WIZm/inception-network-motivation
+    bottleneck layer
+        use the 1*1 filter to shrink the image firstly
+        
+        this process will not lossing the information?
+        
+        
+        
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/4THzO/transfer-learning
+    transfer learning
+        freeze some layers
+        train some layers
+            based on how many data you have
+            
+            
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/AYzbX/data-augmentation
+    not all machine learning app need a lot of data
+    but computer vision does, cannot get enough data
+    
+    
+    
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/nEeJM/object-localization
+    localization
+        1 object in the fig
+    detection
+        multi objects in the fig
+        
+    put the pc, x,y, dh, dw, dx, dy into the y,
+    which in fact is a combination of classification and regression problem.
+        the loss is in different shape when pc has different value.
+        "potential problem?:"
+            only compare pc when pc == 0
+            |y^, y| when pc != 0,
+                is if possible, the |y^,y| is bigger than the |pc^, pc|
+                thus, cost put more weight on the |y^,y|, 
+                so that has worse performance on |pc^,pc|?
+        
+        
+        
+        
+        
