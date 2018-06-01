@@ -304,7 +304,9 @@ why? will not lead to bias??
         skip connection / short cut
             a[l] skip a[l+1] and sum with z[l+1] directly
             
-            
+        helps with the vanishing and exploding gredient problem
+        # https://www.coursera.org/learn/convolutional-neural-networks/lecture/XAKNO/why-resnets-work
+            identity function is easy for residul block to learn
 
         
         
@@ -371,6 +373,8 @@ why? will not lead to bias??
     this is infact use a pipline of filters to equal to a single of filters
     can we directly check if it is equivalent?
     
+
+    
     
 # https://www.coursera.org/learn/convolutional-neural-networks/lecture/9EcTO/bounding-box-predictions
     the YOLO algorithm is intuitively set what we want, so as to set the shape of output,
@@ -407,5 +411,79 @@ why? will not lead to bias??
         
         
         
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/dvrjH/non-max-suppression
+    Non-max suppression algorithm
+        based on the fix grid, YOLO like aogorithm
+        the localization bounding grid is not the fix meshgrid, which could have arbitrary size
+        
+    
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/fF3O0/yolo-algorithm
+    when conduct training, 
+    the task is to form the training set, which contains manually associate the object to the bounding box,
+    i.e. manually set the vector value, 
+    
+    when predicting, the algorithm will predict values for both bounding box, i.e. give contents to the whole vector,
+    then use the non-max suppression to choose the one with the big pc
+    
+
+    # https://www.coursera.org/learn/convolutional-neural-networks/lecture/6UnU4/convolutional-implementation-of-sliding-windows
+        YOLO is using the fix meshgrid, which is just the kind of sliding window without the overlap, 
+        that is which can be implemented by the conv network
+    
+        the stride is control by the MAX POOL size! 10:03
+        "overfeat:integrated recognition, localization and detection using convolutional networks"
+        
+        so in order to ensure no overlap, we need to set the MAX POOL size manually?
+
+
+
+
+# https://www.coursera.org/learn/nlp-sequence-models/lecture/aJT8i/notation
+    the sequence traning samples have the different length, 
+    the original NN CNN deal with the sample with the identical size,
+        these are the fundamental difference
+        
+        
+# https://www.coursera.org/learn/nlp-sequence-models/lecture/ftkzt/recurrent-neural-network-model
+    1. NN cannot deal with input ouput having different size, except using maximum size of the sequence and use padding
+    2. NN doesnt share features learned accross different positions of text
+        no knowledge generalization within the sequence, as all in one go?
+        how is the sharing be represented in CNN?
+            use one filter scan through the whole figure, which is trying to extract out one feature, may be complex and compound
+            but "scan through" is the generalization
+            
+            
+            
+# https://www.coursera.org/learn/nlp-sequence-models/lecture/ftkzt/recurrent-neural-network-model
+    RNN is making use of previous activation a<t-1> to compute the current activation a<t> 
+        a<t> recurrent
+        
+        
+# https://www.coursera.org/learn/nlp-sequence-models/lecture/bc7ED/backpropagation-through-time
+    wa ba wy by are all shared by different t
+    as it is indeed the same network, but recurrent the a<t-1>
+    
+    R - CNN : region proposal CNN, not RNN
+    RNN : recurrent NN
     
     
+    
+ # https://www.coursera.org/learn/nlp-sequence-models/lecture/PKMRR/vanishing-gradients-with-rnns
+    gradient exploding - gradient clipping solve
+        bigger than some threshold, rescale
+        
+        
+        
+# https://www.coursera.org/learn/nlp-sequence-models/lecture/agZiL/gated-recurrent-unit-gru
+    gradient vanishing - gated recurrent unit (GRU)
+    GRU & LSTM
+
+
+# https://www.coursera.org/learn/nlp-sequence-models/lecture/KXoay/long-short-term-memory-lstm
+    in GRU at == ct
+    in LSTM at != ct
+    
+    
+# https://www.coursera.org/learn/nlp-sequence-models/lecture/fyXnn/bidirectional-rnn
+    bidirectinal RNN - BRNN
+        forward propagation on both directions, left to right + right to left
