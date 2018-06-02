@@ -487,3 +487,113 @@ why? will not lead to bias??
 # https://www.coursera.org/learn/nlp-sequence-models/lecture/fyXnn/bidirectional-rnn
     bidirectinal RNN - BRNN
         forward propagation on both directions, left to right + right to left
+
+
+
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/lUBYU/what-is-face-recognition
+    face
+        verification
+        recognition
+        
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/gjckG/one-shot-learning
+    one shot 
+        recognize a person with only one picture - only one training example
+        
+    instead of predict if a image is belong to some specific person(softmax)
+    learn a similarity function, using with to calculate the difference of two figure, then choose the most similar one
+        # in fact is the normal Euclidean distance or the cos distance
+        # key part is get a good representation of the image, then based on which to calculate the distance
+        
+    use the representation of the last FC layer as the encoding of the fig
+    
+    siamese network, network for get the representation
+        # two network with the identical parameters, siamese
+        
+    loss = norm(f(x1), f(x2))
+        # use a pair of image as one sample to train the network once
+        same backpropagation
+        
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/HuUtN/triplet-loss
+    learning the obj func
+        triplet:
+            anchor
+            positive
+            negative
+            
+            3 images
+            
+    trivial solutions   
+        1. all f(x) == 0
+        2. all f(x) the same
+        
+    + margin
+   
+    training set has to have multiple figures of the same person,
+    but when application, the database could only have signle figure of one person (A)
+    this is because, the training process is for generating a good representation
+    
+    
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/xTihv/face-verification-and-binary-classification
+    not using triplet, instead use binary classification,
+    easy to construct the training set?
+    
+    
+    
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/xTihv/face-verification-and-binary-classification
+    each patch comes from different sample
+    why 9 ?
+    
+    
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/jOnEU/cost-function
+    use cost function to indicate which direction to change the image.
+    
+    
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/CvHv6/content-cost-function
+    calculate based on the shallower layers of CNN, it demands more detailed similarity
+    calculate based on the deeper layers of CNN, it only demands the topic is identical, like both dogs
+    
+    similar with the face recognization approach, use the distance between two images to form the cost function?
+    
+    the generation is the a[l](g), which is tuned by changing the weight? so in order to change the figure, 
+    in fact is still changing the network
+    
+    
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/AzcCW/style-cost-function
+    define the "style" of an image as 
+        correlation between activations across channels
+    different channels of a intermediate layer, denote different features, corresponding to different filters
+    
+    correlation,
+        denotes different features are occuring together or not together often
+        
+    J(S) is based on the style matrix, style matrix is based on the correlation 
+        (which in fact is unnormalized corvariance, multiply the corresponding elements of different channel)
+        
+        
+# https://www.coursera.org/learn/convolutional-neural-networks/lecture/OkHJ3/1d-and-3d-generalizations
+    1D 3D data are both having the channels
+        2D 2*3*3 != 3D 2*3*3
+        as 3D 2*3*3 is in fact 2*3*3*1
+        
+        
+        
+        
+# https://www.coursera.org/learn/nlp-sequence-models/lecture/6Oq70/word-representation
+    transfer learning and word embedding
+        transfer learning not necessarily reuse the parameters of NN
+        may be just make use of the pre-trained word embeddings
+        
+    word embedding is train on the fixed sized vocabulary, and only limit words has the new representation,
+    in face recognization, any new figs could be represented as new representation.
+    
+    
+# https://www.coursera.org/learn/nlp-sequence-models/lecture/S2mat/properties-of-word-embeddings
+    the parallelogram relationship hold true only in the original space, instead of in the T-SNE space
+        T-SNE is non-linear
+        
+        
+# https://www.coursera.org/learn/nlp-sequence-models/lecture/K604Z/embedding-matrix
+    word embeddings are learnt in a matrix E
+    use look up function embedding layer to pull out the new representation from E, 
+    instead of using the matrix multiplication
+    
