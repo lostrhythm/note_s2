@@ -597,3 +597,40 @@ why? will not lead to bias??
     use look up function embedding layer to pull out the new representation from E, 
     instead of using the matrix multiplication
     
+# https://www.coursera.org/learn/nlp-sequence-models/lecture/APM5s/learning-word-embeddings
+    neural language model
+        put the representation generation matrix into the network as well, 
+        so that to make use of backprop to solve it.
+        
+    skip gram model
+        nearby 1 word
+        
+    parameter multiply with the label, is similar to the w in the sigmoid function of logistic regression
+
+    softmax is expensive
+    
+    # think: where are the context vector
+    
+    
+# https://www.coursera.org/learn/nlp-sequence-models/lecture/Iwx0e/negative-sampling
+    in each generation, sample k negative models.
+    and use these k+1 samples to train the nc binary classifier, instead of the nc size softmax
+    
+    use power of frequency to model the zipf's law?
+
+
+# https://www.coursera.org/learn/nlp-sequence-models/lecture/IxDTG/glove-word-vectors
+    xij == xji only when in large window
+    reason use 
+        theta_t.T @ e_c 
+        is because, theta_t is related to the output target word,
+        e_c is the representation of the context word
+        
+    glove is using the average of two vectors?
+    why?
+    
+    glove is model the t c vec of a word at the same time,
+    use theta_i.T @ e_j 
+        # i,j are of two different words
+    to compare with the cooccurance, so that the best representation will be minimize the 
+    log Xij
