@@ -1,3 +1,171 @@
+week 2
+logistic regressoin gradient descent
+    computation graph approach
+    
+    g = 1 / (1 + exp(-z))
+    dg / dz = g(1-g)
+    
+    
+code conventions
+    dz = dj / dz
+        # instead of the difference(z)
+    dvar = dj / dvar
+    
+    
+# https://www.coursera.org/learn/neural-networks-deep-learning/lecture/NYnog/vectorization
+    by default using the column vector
+    z = np.dot(w,x)
+        # vector multiply
+        
+# https://www.coursera.org/learn/neural-networks-deep-learning/lecture/moUlO/vectorizing-logistic-regression
+    by default, samples are in columns in data set
+        X.shape = (n, m)
+            # m is the amount of samples
+            
+# https://www.coursera.org/learn/neural-networks-deep-learning/lecture/IgFnJ/vectorizing-logistic-regressions-gradient-output
+    the cumulative of the matrix of the gradient does not need to use for loop as well
+        as 
+            col * row = matrix
+            [col, col, col] @ [row, row, row].T = sum(col * row)
+                # see it as the row of columns, thus the "summarization" is implied
+                # Time 8:27, the final equations
+                
+                
+                
+A trick when you want to flatten a matrix X of shape (a,b,c,d) to a matrix X_flatten of shape (b * c * d, a) is to use:
+    X_flatten = X.reshape(X.shape[0], -1).T      # X.T is the transpose of X
+    
+    
+    
+    
+# https://www.coursera.org/learn/neural-networks-deep-learning/lecture/qg83v/neural-networks-overview
+    computation graph is different from the NN representation graph
+        the input is x w b, instead of x_1 x_2 x_3 ...
+        
+        
+        
+        
+# https://www.coursera.org/learn/neural-networks-deep-learning/lecture/tyAGh/computing-a-neural-networks-output
+    w_i is column vector
+    W == stack(w_1.T, w_2.T, w_3.T, ...)
+    
+    
+# https://www.coursera.org/learn/neural-networks-deep-learning/lecture/4dDC1/activation-functions
+    tanh is almost works better than the sigmoid function
+    as the activation value has a nearly 0 mean
+    but sigmoid is still being used in the output layer, for want the output in (0,1)
+    
+    when the z is very small or very large, the tanh and sigmoid will both have very small slope, 
+    thus slow down the gradient descent
+    
+    "ReLU"
+        Rectified linear unit
+        max(0, z)
+    
+    leaky ReLU
+        small slope when z<0
+        
+        
+# https://www.coursera.org/learn/neural-networks-deep-learning/lecture/OASKH/why-do-you-need-non-linear-activation-functions
+    if using linear activation function and sigmoid function in output layer,
+    no matter how many layers it has, no more expressive than no hidden layer
+    
+    the only place might use a linear activation function,
+    is when doing regressoin, set the hidden layer activation units as tanh or ReLU,
+    but the output layer as the linear function, thus the y could be (-inf, inf)
+    
+    
+    
+    
+# https://www.coursera.org/learn/neural-networks-deep-learning/lecture/OASKH/why-do-you-need-non-linear-activation-functions
+    g = tanh
+    g' = 1 - g**2
+    
+    
+    g = max(0,z)
+    g' =  
+        0   z<0
+        1   z>=0
+            # implementation approximation, in fact should be undefined on z == 0
+            
+            
+            
+# https://www.coursera.org/learn/neural-networks-deep-learning/lecture/Wh8NI/gradient-descent-for-neural-networks
+    np.sum(..., keepdims = True)
+        prevent (n,1) turning to (n,)
+        
+    b 是跟 bias == 1 的维度相乘的项， (统一在W中的话， 即 W 的第一列，) 即 bias
+    
+# https://www.coursera.org/learn/neural-networks-deep-learning/lecture/6dDj7/backpropagation-intuition-optional
+    # Time 14:23 vectorization of back propagation
+    
+    
+# https://www.coursera.org/learn/neural-networks-deep-learning/lecture/XtFPI/random-initialization
+    w = np.random.random((2,2)) * 0.001
+        initialize small, so that will not be at the far end of the tanh where has small slope
+        
+        
+        
+        
+        
+        
+        
+        
+# 25/05/2018
+# https://www.coursera.org/learn/deep-neural-network/lecture/cxG1s/train-dev-test-sets
+    1. big data data set split:
+        98 1 1
+    2. dev/test set need to be same distribution
+    
+# https://www.coursera.org/learn/deep-neural-network/lecture/ZhclI/bias-variance
+    high bias + high variance
+        局部 high bias
+        局部 high variance 
+        同时发生
+        
+# https://www.coursera.org/learn/deep-neural-network/lecture/ZBkx4/basic-recipe-for-machine-learning
+    with bigger network and more data
+    we can achieve the low bias and low variance at the same time
+    
+    
+# https://www.coursera.org/learn/deep-neural-network/lecture/Srsrc/regularization
+    Frobenius norm, L2 norm of matrix
+    
+    
+# https://www.coursera.org/learn/deep-neural-network/lecture/Srsrc/regularization
+    penalization, could be regarded as 
+        large lambda -> smaller w -> smaller z -> linear activation function (in tanh) -> linear network -> cannot fit very complex boudnary
+        
+# https://www.coursera.org/learn/deep-neural-network/lecture/eM33A/dropout-regularization
+    invert drop out
+        1. mask = np.random.random(a.shape[0], a.shape[1]) < keep-prob
+        2. a = a * mask
+        3. a /= keep-prob
+    一部分 a 设为 0 了， 那么其对应的 w 的 grad 就为0 也就是在这一步里 不改变 w
+    keep-prob can be different on different layers
+    
+    
+    
+    
+# 27/05/2018
+# https://www.coursera.org/learn/deep-neural-network/lecture/C9iQO/vanishing-exploding-gradients
+    activation value 
+        vanishing
+        exploding 
+            due to the deepness of layers
+            which will lead to the tiny or large change of the gradients
+            
+            
+# https://www.coursera.org/learn/deep-neural-network/lecture/RwqYe/weight-initialization-for-deep-networks
+    using tanh
+        np.random.randn() * np.sqrt(1/n)
+            # n is the num of activation units of one layers
+            change the variance from 1 to 1/n
+                # this works as the np.sqrt(100) is on x axis
+                
+    using ReLU
+        2 / n
+
 # 28/05/2018
 
 # https://www.coursera.org/learn/deep-neural-network/lecture/XzSSa/numerical-approximation-of-gradients
