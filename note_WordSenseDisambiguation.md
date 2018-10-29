@@ -31,3 +31,6 @@ fastText + RNN
 fastText + TextCNN + TextRNN  
     # https://juejin.im/entry/58d8ae23a22b9d00646bde92  
     Hyper-parameter tuning - A Sensitivity Analysis of (and Practitioners’ Guide to) Convolutional Neural Networks for Sentence Classification  
+
+Wordnet Mappings
+    # https://www.leiphone.com/news/201701/W2G0J9H3TeTziXKp.html
