@@ -21,10 +21,10 @@ meaning of basic tags
 
 
 
-# https://www.jiqizhixin.com/articles/2018-07-05-20
-    generate training set - manually label small part, then use semi-supervised approach to enlarge the set  
-        cooccurance of words to label the sentence
-        
-    fastText - classifies the context to tell if the context in which the target term has the target meaning 
-    RNN - fix the imbalance problem
+    # https://www.jiqizhixin.com/articles/2018-07-05-20
+        generate training set - manually label small part, then use semi-supervised approach to enlarge the set  
+            cooccurance of words to label the sentence
+
+        fastText - classifies the context to tell if the context in which the target term has the target meaning 
+        RNN - fix the imbalance problem
     
