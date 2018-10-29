@@ -53,8 +53,9 @@ Knowledge-based Word Sense Disambiguation using a Bidirectional LSTM
     Semi-supervised Word Sense Disambiguation with Neural Models” by Yuan et al. 
         Their LSTM model is trained on sense supervised unlabeled data and generates context vectors based on previous history.  
         *generates context vectors?*  
-        To predict senses, they hold out the sense evaluated word and run the entire context through their LSTM.
-        
+        To predict senses, they hold out the sense evaluated word and run the entire context through their LSTM.  
+    conducted is replacing numbers with a <number> tag. Words not present in the training set are considered unknown during test.
+    limit the size of the context to max 140 centered around the target word to facilitate faster training
     
     
     
