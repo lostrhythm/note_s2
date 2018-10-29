@@ -27,3 +27,6 @@ fastText + RNN
     fastText - classifies the context to tell if the context in which the target term has the target meaning 
     RNN - fix the imbalance problem
     
+
+fastText w2v
+    # https://juejin.im/entry/58d8ae23a22b9d00646bde92
