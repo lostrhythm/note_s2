@@ -58,6 +58,14 @@ Knowledge-based Word Sense Disambiguation using a Bidirectional LSTM
     limit the size of the context to max 140 centered around the target word to facilitate faster training
     
     
+Neural+machine+translation+with+attention+-+v4  
+    # X: a processed version of the human readable dates in the training set, where each character is replaced by an index mapped to the character via human_vocab. Each date is further padded to  Tx  values with a special character (< pad >). X.shape = (m, Tx)
+    
+
+RNN with variable length  
+    # http://www.cnblogs.com/data2value/p/9336572.html  
+    # http://friskit.me/2018/04/23/rnn-padding-and-masking-in-keras/
+    
     
     
     
@@ -90,6 +98,15 @@ B. directly use W2V to represent the sentence, and use MLP to do binary classifi
 
 
 
+
+
+data processing pipeline  
+    1. split the sentence at the target term, if multiple target terms, 1 : m
+    2. use a) regular expression tokenizer b) lemmatization c) padding with specifical token </p> at the head
+        - text_clean_pipeline.py  
+    3. make w2v model, to make use of GloVe embeddings to transfer the terms to embeddings, deal </p> with Zero-emb  
+        - w2v_translater.py  
+        
 
 
 
