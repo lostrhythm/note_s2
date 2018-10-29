@@ -49,10 +49,19 @@ Knowledge-based Word Sense Disambiguation using a Bidirectional LSTM
     # https://github.com/Jeff09/Word-Sense-Disambiguation-using-Bidirectional-LSTM  
         # Global Vectors for Word Representation (GloVe), introduced by Pennington et al. (2014) is a hybrid
         # approach to embedding words that combine a log-linear model, made popular by Mikolov et al. (2013),
-        # with counting based co-occurrence statistics to more efficiently capture global statistics
-
-
-
+        # with counting based co-occurrence statistics to more efficiently capture global statistics  
+    Semi-supervised Word Sense Disambiguation with Neural Models” by Yuan et al. 
+        Their LSTM model is trained on sense supervised unlabeled data and generates context vectors based on previous history.  
+        *generates context vectors?*  
+        To predict senses, they hold out the sense evaluated word and run the entire context through their LSTM.
+        
+    
+    
+    
+    
+    
+    
+    
     
     
     
