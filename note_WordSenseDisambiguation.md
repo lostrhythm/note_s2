@@ -102,7 +102,7 @@ B. directly use W2V to represent the sentence, and use MLP to do binary classifi
 
 data processing pipeline  
     1. split the sentence at the target term, if multiple target terms, 1 : m
-    2. use a) regular expression tokenizer b) lemmatization c) padding with specifical token </p> at the head
+    2. use a) regular expression tokenizer b) lemmatization c) padding with specifical token <//p> at the head
         - text_clean_pipeline.py  
     3. make w2v model, to make use of GloVe embeddings to transfer the terms to embeddings, deal </p> with Zero-emb  
         - w2v_translater.py  
