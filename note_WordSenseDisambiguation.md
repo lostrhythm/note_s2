@@ -101,12 +101,25 @@ B. directly use W2V to represent the sentence, and use MLP to do binary classifi
 
 
 data processing pipeline  
-    1. split the sentence at the target term, if multiple target terms, 1 : m
+    1. split the sentence at the target term, if multiple target terms, 1 : m,  
+        - (forward, backward, label)
     2. use a) regular expression tokenizer b) lemmatization c) padding with specifical token <//p> at the head
         - text_clean_pipeline.py  
     3. make w2v model, to make use of GloVe embeddings to transfer the terms to embeddings, deal </p> with Zero-emb  
         - w2v_translater.py  
         
+model  
+    1. embedding layer  
+    2. forward LSTM layer + dropout  
+    3. backward LSTM layer + dropout  
+    4. a merging hidden layer - output the encoding of context
+    5. logistic regression layer - output 0/1 to say the context is about the ticker or not  
+    
+model applier  
+    1. check if a sentence contain the target term or not  
+    2. if contains, use data processing pipeline to process the sentence to (f, b, l)  
+    3. load model to predict the sample  
+    
 
 
 
