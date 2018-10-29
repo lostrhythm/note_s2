@@ -28,5 +28,6 @@ fastText + RNN
     RNN - fix the imbalance problem
     
 
-fastText w2v
-    # https://juejin.im/entry/58d8ae23a22b9d00646bde92
+fastText + TextCNN + TextRNN  
+    # https://juejin.im/entry/58d8ae23a22b9d00646bde92  
+    Hyper-parameter tuning - A Sensitivity Analysis of (and Practitioners’ Guide to) Convolutional Neural Networks for Sentence Classification  
