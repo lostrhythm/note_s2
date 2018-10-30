@@ -68,7 +68,7 @@ RNN with variable length
     
     
     
-    
+
     
     
     
@@ -125,7 +125,21 @@ model applier
 
 
 
+# 30/10/2018
+bitbucekt  
+    access key != general ssh key  
+    # https://stackoverflow.com/questions/46893328/bitbucket-access-keys-can-only-be-used-for-read-only  
+    
 
+version  
+    >>> keras.__version__  
+    '2.2.0'  
+    >>> import tensorflow as tf  
+    >>> tf.__version__  
+    '1.8.0'  
+    >>>  
+    
+    
 
 
     
