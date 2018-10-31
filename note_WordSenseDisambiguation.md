@@ -150,3 +150,8 @@ LSTM
 logging twice bug
     the get_logger is invoked 1. class definition process 2. class instantiating process
     
+
+
+
+1. download glove
+2. generate glove emb matrix
