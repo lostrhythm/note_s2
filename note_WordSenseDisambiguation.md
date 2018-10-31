@@ -147,5 +147,6 @@ LSTM
   [(20, 50), (20, 50), 0, 0, 1]
 
     
-    
+logging twice bug
+    the get_logger is invoked 1. class definition process 2. class instantiating process
     
