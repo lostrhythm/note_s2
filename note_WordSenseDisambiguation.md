@@ -155,3 +155,13 @@ logging twice bug
 
 1. download glove
 2. generate glove emb matrix
+
+
+
+
+Keras 2.2 + tensorflow  
+    # https://github.com/keras-team/keras/issues/4471  
+    
+    
+1. ticker not existing in the glove
+2. standarize the "term" of pipeline, use a map to map terms into tickerIdx
