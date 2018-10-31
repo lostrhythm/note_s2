@@ -165,3 +165,4 @@ Keras 2.2 + tensorflow
     
 1. ticker not existing in the glove
 2. standarize the "term" of pipeline, use a map to map terms into tickerIdx
+3. define metrics
