@@ -14,3 +14,5 @@ p
     %matplotlib inline 
         which tells the notebook to render the plots in the browser and not to file.
     
+convert to pdf  
+    https://www.jianshu.com/p/7665de2f8119
