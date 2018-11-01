@@ -178,5 +178,5 @@ np.where, multi-conditions
 model.predict
     output shape == (1, ...)
 
-abstract class
+abstract class  
     # https://www.python-course.eu/python3_abstract_classes.php
