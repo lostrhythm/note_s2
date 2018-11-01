@@ -179,4 +179,8 @@ model.predict
     output shape == (1, ...)
 
 abstract class  
-    # https://www.python-course.eu/python3_abstract_classes.php
+    # https://www.python-course.eu/python3_abstract_classes.php  
+
+.format  
+    https://pyformat.info/  
+
