@@ -163,6 +163,17 @@ Keras 2.2 + tensorflow
     # https://github.com/keras-team/keras/issues/4471  
     
     
-1. ticker not existing in the glove
+1. ticker not existing in the glove  
+    - not a problem, as it only have affection when it is works as the context
+    
 2. standarize the "term" of pipeline, use a map to map terms into tickerIdx
+    - done
+    
 3. define metrics
+
+
+np.where, multi-conditions  
+    https://stackoverflow.com/questions/16343752/numpy-where-function-multiple-conditions
+    
+model.predict
+    output shape == (1, ...)
