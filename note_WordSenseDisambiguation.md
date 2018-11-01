@@ -184,3 +184,5 @@ abstract class
 .format  
     https://pyformat.info/  
 
+write utf-8 file  
+    https://stackoverflow.com/questions/19591458/python-reading-from-a-file-and-saving-to-utf-8/19591815  
