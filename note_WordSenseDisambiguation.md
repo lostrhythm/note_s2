@@ -192,3 +192,11 @@ __init__
     import inside it are for the outside!  
     
     
+    
+check and remove logger  
+    logging.Logger.manager.loggerDict#.pop('LSTM_classifier')  
+    
+    
+    
+    
+
